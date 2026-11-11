@@ -1,0 +1,1 @@
+After Push, writing in file1.txt
