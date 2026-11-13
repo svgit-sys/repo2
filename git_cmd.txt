@@ -334,3 +334,26 @@
   334  git log --oneline
   335  ls
   336  history > git_cmd.txt
+  337  ls
+  338  touch file2.txt
+  339  git add file2.txt
+  340  git  status
+  341  git restore --staged file2.txt
+  342  git  status
+  343  git add .
+  344  git status
+  345  git commit -m "file2 added"
+  346  git status
+  347  git push origin main
+  348  git push origin main
+  349  history > git_cmd.txt
+  350  notepad file1.txt
+  351  touch file1.txt
+  352  git status
+  353  git add file1.txt
+  354  git status
+  355  git commit -m "After Push file1.txt added"
+  356  git status
+  357  git push origin main
+  358  git status
+  359  history > git_cmd.txt

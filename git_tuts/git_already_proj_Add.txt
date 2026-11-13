@@ -1,0 +1,681 @@
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ cd ..
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials
+$ mkdir repo1
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials
+$ cd repo
+repo1/        repo2/        repoinfo.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials
+$ cd repo1
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1
+$ git init
+Initialized empty Git repository in D:/Trng/GIT_Tutorials/repo1/.git/
+
+
+------------------------------------------
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ touch t1.txt t2.txt t3.txt file1.py file2.py file3.py
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ ls
+file1.py  file2.py  file3.py  t1.txt  t2.txt  t3.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git add file1.py
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git add file2.py
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.py
+        new file:   file2.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file3.py
+        t1.txt
+        t2.txt
+        t3.txt
+
+
+---------------------------------------------
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git add file3.py
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git commit -m "Python files added"
+[master (root-commit) 6a0b887] Python files added
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1.py
+ create mode 100644 file2.py
+ create mode 100644 file3.py
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t1.txt
+        t2.txt
+        t3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+--------------------------------
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ notepad .gitignore
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ touch file4.py file5.py
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        file4.py
+        file5.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ mkdir docs
+
+
+
+--------------------------------------------------------
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ mkdir docs
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        file4.py
+        file5.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ touch docs/mydata.pdf
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        docs/
+        file4.py
+        file5.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ touch docs/docs_t1.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        docs/
+        file4.py
+        file5.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ touch docs/docs_t1.py
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        docs/
+        file4.py
+        file5.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git add .
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   docs/docs_t1.py
+        new file:   docs/mydata.pdf
+        new file:   file4.py
+        new file:   file5.py
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git commit -m "files of py and pdf added"
+[master 7e72ec7] files of py and pdf added
+ 5 files changed, 1 insertion(+)
+ create mode 100644 .gitignore
+ create mode 100644 docs/docs_t1.py
+ create mode 100644 docs/mydata.pdf
+ create mode 100644 file4.py
+ create mode 100644 file5.py
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ history > git_cmd.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git log
+commit 7e72ec78feb41d05256028995b0cf24929f502ae (HEAD -> master)
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 12:57:10 2026 +0530
+
+    files of py and pdf added
+
+commit 6a0b887a195b055dbc05db8a7eafc7155d857c46
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 12:48:50 2026 +0530
+
+    Python files added
+
+
+--------------------------------------------------
+
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ ls
+docs/     file2.py  file4.py  git_cmd.txt  t1.txt  t3.txt
+file1.py  file3.py  file5.py  images/      t2.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ touch images/img1.jpg
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ touch images/img2.jpg
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ ls
+docs/     file2.py  file4.py  git_cmd.txt  t1.txt  t3.txt
+file1.py  file3.py  file5.py  images/      t2.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git sttatus
+git: 'sttatus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git add .
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git commit -m "gitingore modified"
+[master 167e6d2] gitingore modified
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+
+----------------------------------------------------
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ touch info.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+-----------------------------------------------------
+
+INSYNC - WR and RR github
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git remote add origin https://github.com/svgit-sys/repo_already_proj.git
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git branch -M master
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git push -u origin master
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (13/13), 1.04 KiB | 151.00 KiB/s, done.
+Total 13 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/svgit-sys/repo_already_proj.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git log --oneline
+c1e9d0b (HEAD -> master, origin/master) info.txt added
+167e6d2 gitingore modified
+7e72ec7 files of py and pdf added
+6a0b887 Python files added
+
+
+-----------------------------------------------------
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git log --oneline
+9bf2710 (HEAD -> master, origin/master) Git_cmd.txt added
+c1e9d0b info.txt added
+167e6d2 gitingore modified
+7e72ec7 files of py and pdf added
+6a0b887 Python files added
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git log -2
+commit 9bf271021c8860031bc351b742ca03e48a91ffa4 (HEAD -> master, origin/master)
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 13:21:37 2026 +0530
+
+    Git_cmd.txt added
+
+commit c1e9d0b047fe7ce86f140b64bfd24fb0efa3dbb4
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 13:12:10 2026 +0530
+
+    info.txt added
+
+
+----------------------------------------------------
+
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git log
+commit 9bf271021c8860031bc351b742ca03e48a91ffa4 (HEAD -> master, origin/master)
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 13:21:37 2026 +0530
+
+    Git_cmd.txt added
+
+commit c1e9d0b047fe7ce86f140b64bfd24fb0efa3dbb4
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 13:12:10 2026 +0530
+
+    info.txt added
+
+commit 167e6d2666e5b7c2cbdaf3d4971fc305707a3770
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 13:02:07 2026 +0530
+
+    gitingore modified
+
+commit 7e72ec78feb41d05256028995b0cf24929f502ae
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 12:57:10 2026 +0530
+
+    files of py and pdf added
+
+commit 6a0b887a195b055dbc05db8a7eafc7155d857c46
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 12:48:50 2026 +0530
+
+    Python files added
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git log --oneline -2
+9bf2710 (HEAD -> master, origin/master) Git_cmd.txt added
+c1e9d0b info.txt added
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git log --oneline -3
+9bf2710 (HEAD -> master, origin/master) Git_cmd.txt added
+c1e9d0b info.txt added
+167e6d2 gitingore modified
+
+
+
+---------------------------------------------------------
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git log --pretty=full
+commit 9bf271021c8860031bc351b742ca03e48a91ffa4 (HEAD -> master, origin/master)
+Author: svgit-sys <sv.git111191@gmail.com>
+Commit: svgit-sys <sv.git111191@gmail.com>
+
+    Git_cmd.txt added
+
+commit c1e9d0b047fe7ce86f140b64bfd24fb0efa3dbb4
+Author: svgit-sys <sv.git111191@gmail.com>
+Commit: svgit-sys <sv.git111191@gmail.com>
+
+    info.txt added
+
+commit 167e6d2666e5b7c2cbdaf3d4971fc305707a3770
+Author: svgit-sys <sv.git111191@gmail.com>
+Commit: svgit-sys <sv.git111191@gmail.com>
+
+    gitingore modified
+
+commit 7e72ec78feb41d05256028995b0cf24929f502ae
+Author: svgit-sys <sv.git111191@gmail.com>
+Commit: svgit-sys <sv.git111191@gmail.com>
+
+    files of py and pdf added
+
+commit 6a0b887a195b055dbc05db8a7eafc7155d857c46
+Author: svgit-sys <sv.git111191@gmail.com>
+Commit: svgit-sys <sv.git111191@gmail.com>
+
+    Python files added
+
+
+----------------------------------------------
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git log --pretty=short
+commit 9bf271021c8860031bc351b742ca03e48a91ffa4 (HEAD -> master, origin/master)
+Author: svgit-sys <sv.git111191@gmail.com>
+
+    Git_cmd.txt added
+
+commit c1e9d0b047fe7ce86f140b64bfd24fb0efa3dbb4
+Author: svgit-sys <sv.git111191@gmail.com>
+
+    info.txt added
+
+commit 167e6d2666e5b7c2cbdaf3d4971fc305707a3770
+Author: svgit-sys <sv.git111191@gmail.com>
+
+    gitingore modified
+
+commit 7e72ec78feb41d05256028995b0cf24929f502ae
+Author: svgit-sys <sv.git111191@gmail.com>
+
+    files of py and pdf added
+
+commit 6a0b887a195b055dbc05db8a7eafc7155d857c46
+Author: svgit-sys <sv.git111191@gmail.com>
+
+    Python files added
+
+----------------------------------------------
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git log --pretty=medium
+commit 9bf271021c8860031bc351b742ca03e48a91ffa4 (HEAD -> master, origin/master)
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 13:21:37 2026 +0530
+
+    Git_cmd.txt added
+
+commit c1e9d0b047fe7ce86f140b64bfd24fb0efa3dbb4
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 13:12:10 2026 +0530
+
+    info.txt added
+
+commit 167e6d2666e5b7c2cbdaf3d4971fc305707a3770
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 13:02:07 2026 +0530
+
+    gitingore modified
+
+commit 7e72ec78feb41d05256028995b0cf24929f502ae
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 12:57:10 2026 +0530
+
+    files of py and pdf added
+
+commit 6a0b887a195b055dbc05db8a7eafc7155d857c46
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 12:48:50 2026 +0530
+
+    Python files added
+
+----------------------------------------
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git log --pretty=oneline
+9bf271021c8860031bc351b742ca03e48a91ffa4 (HEAD -> master, origin/master) Git_cmd.txt added
+c1e9d0b047fe7ce86f140b64bfd24fb0efa3dbb4 info.txt added
+167e6d2666e5b7c2cbdaf3d4971fc305707a3770 gitingore modified
+7e72ec78feb41d05256028995b0cf24929f502ae files of py and pdf added
+6a0b887a195b055dbc05db8a7eafc7155d857c46 Python files added
+
+-----------------------------------------------
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git log --pretty=oneline
+8d9c60afc452a523dda1c28de1b583817ca2cbf5 (HEAD -> master) file1.py updated
+9bf271021c8860031bc351b742ca03e48a91ffa4 (origin/master) Git_cmd.txt added
+c1e9d0b047fe7ce86f140b64bfd24fb0efa3dbb4 info.txt added
+167e6d2666e5b7c2cbdaf3d4971fc305707a3770 gitingore modified
+7e72ec78feb41d05256028995b0cf24929f502ae files of py and pdf added
+6a0b887a195b055dbc05db8a7eafc7155d857c46 Python files added
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git branch b1
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git branch
+  b1
+* master
+
+
+--------------------------------------
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ git status
+On branch b1
+nothing to commit, working tree clean
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ history > git_cmd.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ touch mydata.py
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ touch file1.py
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ notepad file1.py
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ git status
+On branch b1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.py
+        modified:   git_cmd.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mydata.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ git add .
+warning: in the working copy of 'git_cmd.txt', LF will be replaced by CRLF the next time Git touches it
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ git status
+On branch b1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file1.py
+        modified:   git_cmd.txt
+        new file:   mydata.py
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ git commit -m "Files updated from branch b1"
+[b1 e9d6393] Files updated from branch b1
+ 3 files changed, 18 insertions(+)
+ create mode 100644 mydata.py
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ git status
+On branch b1
+nothing to commit, working tree clean
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$
+
+-----------------------------------------------------------------
+All branches info by --oneline --all
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (master)
+$ git log --oneline --all
+e9d6393 (b1) Files updated from branch b1
+8d9c60a (HEAD -> master) file1.py updated
+9bf2710 (origin/master) Git_cmd.txt added
+c1e9d0b info.txt added
+167e6d2 gitingore modified
+7e72ec7 files of py and pdf added
+6a0b887 Python files added
+
+---------------------------------------------------------------------
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ history > git_cmd.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ git log --oneline --all --graph
+* c7efefe (HEAD -> b1) File6.txt added from b1
+* e9d6393 Files updated from branch b1
+| * 6c6f243 (master) added myfile.py
+|/
+* 8d9c60a file1.py updated
+* 9bf2710 (origin/master) Git_cmd.txt added
+* c1e9d0b info.txt added
+* 167e6d2 gitingore modified
+* 7e72ec7 files of py and pdf added
+* 6a0b887 Python files added
+
+--------------------  New Branch ----------------------
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ git checkout b2
+error: pathspec 'b2' did not match any file(s) known to git
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ git switch b2
+fatal: invalid reference: b2
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo1 (b1)
+$ git checkout -b b2
+Switched to a new branch 'b2'
+
+
+-------------------------------

@@ -1,0 +1,420 @@
+git config --list
+
+git config --global user.name "Your Name"
+git config --global user.name "svgit-sys"
+
+git config --global user.email "you@example.com"
+git config --global user.email "sv.git111191@gmail.com"
+
+ pwd
+/c/Users/SBIT
+
+-------------------------------------------
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials
+$ git clone https://github.com/svgit-sys/repo2.git
+Cloning into 'repo2'...
+warning: You appear to have cloned an empty repository.
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials
+$ ls
+'Git Tutorials -day1 .txt'  'New folder'/   repo2/   repoinfo.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials
+$ cd repo2
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ touch file1.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ touch file2.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ touch file3.txt file4.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.txt
+        file2.txt
+        file3.txt
+        file4.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+------------------------------------------------------------------------------
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git add file1.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2.txt
+        file3.txt
+        file4.txt
+
+-----------------------------------------------------------------------
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ notepad file1.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2.txt
+        file3.txt
+        file4.txt
+
+
+--------------------------------------------------------------------
+
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ cat file1.txt
+This is the new content for file1.txt
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git restore file1.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ cat file1.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2.txt
+        file3.txt
+        file4.txt
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git commit -m "file1.txt added"
+[main (root-commit) 896da10] file1.txt added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2.txt
+        file3.txt
+        file4.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+-----------------------------------------------------------
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ notepad file1.txt
+
+
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2.txt
+        file3.txt
+        file4.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+-------------------------------------------
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status -s
+ M file1.txt
+?? file2.txt
+?? file3.txt
+?? file4.txt
+
+---------------------------------------------------------------
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git add file2.txt
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status -s
+ M file1.txt
+A  file2.txt
+?? file3.txt
+?? file4.txt
+
+---------------------------------------------------------------------
+
+$ git add file1.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status -s
+M  file1.txt
+A  file2.txt
+?? file3.txt
+?? file4.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file1.txt
+        new file:   file2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file3.txt
+        file4.txt
+
+
+----------------------------------------------------------------------
+
+
+Escape from commit msg mode : 
+Press Ecs + Shift : + wq
+
+-------------------------------------------------------------------------
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file3.txt
+        file4.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git log
+commit eba44018622092411ed7a25c5772bb783315dbad (HEAD -> main)
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 11:45:00 2026 +0530
+
+    file1.txt, file2.txt are added to LR
+
+commit 896da101bc79bfe3884ff6cb337def69412e5d43
+Author: svgit-sys <sv.git111191@gmail.com>
+Date:   Wed Nov 11 11:37:25 2026 +0530
+
+    file1.txt added
+
+
+------------------------------------------------------
+
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status -s
+ M git_cmd.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ history > git_cmd.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git log --oneline
+eee6eef (HEAD -> main) file3 file4 added
+afe5785 Change3 ammend commit msg cmd
+896da10 file1.txt added
+
+
+------------------------------------------------------------------
+
+GIT RESET HARD -- all prev changes lost
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git log --oneline
+eee6eef (HEAD -> main) file3 file4 added
+afe5785 Change3 ammend commit msg cmd
+896da10 file1.txt added
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git reset --hard 896da10
+HEAD is now at 896da10 file1.txt added
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git log --oneline
+896da10 (HEAD -> main) file1.txt added
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ ls
+file1.txt
+
+
+
+---------------------------------------------------------
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ ls
+file1.txt  git_cmd.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ touch file2.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git add file2.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git  status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git_cmd.txt
+
+
+--------------------------
+
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ touch file2.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git add file2.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git  status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git_cmd.txt
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git restore --staged file2.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git  status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2.txt
+        git_cmd.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git add .
+warning: in the working copy of 'git_cmd.txt', LF will be replaced by CRLF the next time Git touches it
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file2.txt
+        new file:   git_cmd.txt
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git commit -m "file2 added"
+[main d3958ec] file2 added
+ 2 files changed, 336 insertions(+)
+ create mode 100644 file2.txt
+ create mode 100644 git_cmd.txt
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+------------------------------------------------------------
+
+
+SBIT@DESKTOP-5R32FH1 MINGW64 /d/Trng/GIT_Tutorials/repo2 (main)
+$ git push origin main
+info: please complete authentication in your browser...
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 2.57 KiB | 526.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/svgit-sys/repo2.git
+ * [new branch]      main -> main
